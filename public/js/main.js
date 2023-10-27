@@ -3,7 +3,7 @@
 async function confirm() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    await fetch("http://localhost:8080/api/users/confirm/" + urlParams.get("id"))
+    await fetch("https://monkfish-app-obgie.ondigitalocean.app/confirm/" + urlParams.get("id"))
         .then(response => {
             if (!response.ok) {
                 throw Error(response.json().message)
